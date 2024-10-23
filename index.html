@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>QuNest IDO</title>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!--====== Google Fonts ======-->
+    <link href="../../css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!--====== Font Awesome ======-->
+    <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
+    <!--====== Flaticon CSS ======-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.3.min.css">
+    <!--====== Magnific Popup ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--====== Slick Slider ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!--====== Nice Select ======-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--====== Padding Margin ======-->
+    <link rel="stylesheet" href="assets/css/spacing.min.css">
+    <!--====== Menu css ======-->
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <!--====== Main css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+
+        <!--====== Header Part Start ======-->
+        <header class="main-header">
+
+            <!--Header-Top-->
+            <div class="header-top text-center text-white bg-blue py-5">
+                <div class="container rel z-1">
+                    <p>Welcome to QuNest IDO</p>
+                    <img class="header-left-shape" src="assets/images/shapes/header-top-left.png" alt="shape">
+                    <img class="header-right-shape slideLeftRight infinite"
+                        src="assets/images/shapes/header-top-right.png" alt="shape">
+                </div>
+            </div>
+
+            <!--Header-Upper-->
+            <div class="header-upper">
+                <div class="container clearfix">
+                    <div class="header-inner py-20">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index.html"><img src="assets/images/iconqun.png"
+                                        alt="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                    <div class="logo-mobile"><a href="index.html"><img
+                                                src="assets/images/iconqun.png" alt="Logo"></a></div>
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-collapse" aria-controls="main-menu">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+
+                        <div class="menu-right d-none d-lg-flex align-items-center ml-lg-auto">
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+        </header>
+        <!--====== Header Part End ======-->
+
+
+        <!--====== Hero Section Start ======-->
+        <section class="hero-section rel z-2 pt-210 pb-75" id="home">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-11">
+                        <div class="hero-content rmb-75">
+                            <span class="sub-title wow fadeInUp delay-0-2s">QuNest</span>
+                            <h2 class="mb-15 wow fadeInUp delay-0-4s">10000 QUN = 600 USDQ</h2>
+                            <form class="mb-15 wow fadeInUp delay-0-4s" ,id="swap-form">
+
+                                <div class="input-box">
+                                    <label>From</label>
+                                    
+
+                                    <input type="number" id="amountInput" placeholder="Enter USDQ amount" step="600" min="600">
+                                </div>
+
+                                
+                               
+                                
+                                <button type="button" id="outputButton" style="background-color: white;">Receive: </button>
+
+                            </form>
+                            <div>
+                            
+                                <button onclick="approveToken()" class="theme-btn mb-15">Approve USDQ</button>
+                                </div>
+                            <div>
+                                
+                                <br>
+                                <button onclick="swapTokens()" class="theme-btn mb-15"
+                                    ,onclick="">Buy QUN</button> 
+                                </div>
+                            
+                            <div id="account" ></div> 
+                            <div id="message"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image wow fadeInLeft delay-0-4s">
+                            <img src="assets/images/QUNlogo.png" alt="Hero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="dots-shape" src="assets/images/shapes/dots.png" alt="Shape">
+            <img class="tringle-shape" src="assets/images/shapes/tringle.png" alt="Shape">
+            <img class="close-shape" src="assets/images/shapes/close.png" alt="Shape">
+        </section>
+        <!--====== Hero Section End ======-->
+    </div>
+    <!--End pagewrapper-->
+
+
+
+
+    <!--====== Jquery ======-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!--====== Bootstrap ======-->
+    <script src="assets/js/bootstrap.4.5.3.min.js"></script>
+    <!--====== Appear js ======-->
+    <script src="assets/js/appear.js"></script>
+    <!--====== WOW js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--====== Isotope ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--====== Circle Progress ======-->
+    <script src="assets/js/circle-progress.min.js"></script>
+    <!--====== Image loaded ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!--====== Nice Select ======-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--====== Magnific ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--====== Slick Slider ======-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--====== Main JS ======-->
+    <script src="assets/js/script.js"></script>
+    <script>
+
+
+let web3;
+        let account;
+        const tokenAAddress = "0x13a9b9d60579105C611EF0bE3159D21683Aebd65"; // Replace with your Token A contract address
+        const tokenBAddress = "0xCE38d6A419925c8B8716Dc6b8393BDaa24551A27"; // Replace with your Token B contract address
+        const contractAddress = "0x8c7Bff93E7fC203382Da41bFc7F822F13EEa856e"; // Replace with your contract address
+
+        // Connect to MetaMask
+        async function connectWallet() {
+            if (window.ethereum) {
+                web3 = new Web3(window.ethereum);
+                await window.ethereum.enable();
+                const accounts = await web3.eth.getAccounts();
+                account = accounts[0];
+                console.log("Connected to account:", account);
+            } else {
+                alert('Please install MetaMask!');
+            }
+        }
+
+        // ABI for the approval function
+        const tokenABI = [
+            {
+                "constant": false,
+                "inputs": [
+                    { "name": "_spender", "type": "address" },
+                    { "name": "_value", "type": "uint256" }
+                ],
+                "name": "approve",
+                "outputs": [{ "name": "", "type": "bool" }],
+                "type": "function"
+            }
+        ];
+
+        // ABI for the buyQUN function
+        const contractABI = [
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "amountA",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "buyQUN",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }
+        ];
+
+        // Approve Token A for the contract
+        async function approveToken() {
+            const amount = document.getElementById("tokenAmount").value;
+            const tokenContract = new web3.eth.Contract(tokenABI, tokenAAddress);
+
+            try {
+                await tokenContract.methods.approve(contractAddress, web3.utils.toWei(amount, "ether"))
+                    .send({ from: account });
+                alert("Token A approved successfully!");
+            } catch (error) {
+                console.error("Error approving Token A:", error);
+            }
+        }
+
+        // Swap Token A for Token B (calls the buyQUN function)
+        async function swapTokens() {
+            const amount = document.getElementById("tokenAmount").value;
+            const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+            try {
+                await contract.methods.buyQUN(web3.utils.toWei(amount, "ether"))
+                    .send({ from: account });
+                alert("Tokens swapped successfully!");
+            } catch (error) {
+                console.error("Error swapping tokens:", error);
+            }
+        }
+
+        window.onload = connectWallet;
+    </script>
+
+    <script>
+        let bnbPrice = 0.06;
+
+
+
+
+
+
+document.getElementById("amountInput").addEventListener("input", function() {
+    // Get the input value
+    var inputValue = parseFloat(this.value);
+    
+    // Check if the input is a valid number
+    if (!isNaN(inputValue)) {
+        // Calculate the output value based on the real-time BNB price
+        var outputValue = inputValue / bnbPrice;
+
+        // Display the output inside the button
+        document.getElementById("outputButton").innerText = "Amount: " + outputValue.toFixed(2) + " QUN";
+    } else {
+        // If the input is not a valid number, reset the button text
+        document.getElementById("outputButton").innerText = "Amount";
+    }
+});
+    </script>
+
+</body>
+
+</html>
