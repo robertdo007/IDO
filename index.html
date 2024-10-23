@@ -239,7 +239,7 @@ let web3;
 
         // Approve Token A for the contract
         async function approveToken() {
-            const amount = document.getElementById("tokenAmount").value;
+            const amount = document.getElementById("amountInput").value;
             const tokenContract = new web3.eth.Contract(tokenABI, tokenAAddress);
 
             try {
@@ -253,7 +253,7 @@ let web3;
 
         // Swap Token A for Token B (calls the buyQUN function)
         async function swapTokens() {
-            const amount = document.getElementById("tokenAmount").value;
+            const amount = document.getElementById("amountInput").value;
             const contract = new web3.eth.Contract(contractABI, contractAddress);
 
             try {
